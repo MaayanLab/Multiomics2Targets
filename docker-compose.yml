@@ -3,7 +3,7 @@ services:
   app:
     platform: linux/x86_64
     build: .
-    image: maayanlab/x2ktr:0.1.05
+    image: maayanlab/x2ktr:0.1.06
     environment:
       - APPYTER_DATA_DIR=s3://${MINIO_ACCESS_KEY}:${MINIO_SECRET_KEY}@s3:9000/${MINIO_BUCKET}
       - APPYTER_EXECUTOR=dispatch::http://appyter-orchestrator:5000?params.executor=docker::maayanlab/x2ktr:latest
